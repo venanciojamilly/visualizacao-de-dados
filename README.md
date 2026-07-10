@@ -3,7 +3,8 @@
 Aluna: Jamilly Venâncio da Silva
 
 Projeto 1: https://venanciojamilly.github.io/visualizacao-de-dados/lab6-projeto1.html
-PROJETO DE VISUALIZAÇÃO 1
+
+## Projeto de Visualização 1
 
     História a ser contada: Volume de chuva acumulada na Fazenda Carnaúba por ano em um período de 10 anos (2016 a 2025);
     Mecanismo: visualização interativa para apresentação oral da visualização exibida em projetor de tela, além de publicação em página da web;
@@ -22,6 +23,7 @@ PROJETO DE VISUALIZAÇÃO 1
 
 
 Projeto 2: https://venanciojamilly.github.io/visualizacao-de-dados/lab6-projeto2.html
+## Projeto de Visualização 2
 
     História a ser contada: Variação (ou diferença) da chuva acumulada na Fazenda Carnaúba em relação ao ano anterior (entre 2016 e 2025);
     Mecanismo: visualização interativa para apresentação oral da visualização exibida em projetor de tela, além de publicação em página da web;
