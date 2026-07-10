@@ -1,0 +1,149 @@
+<!--
+	THIS EXAMPLE WAS DOWNLOADED FROM https://echarts.apache.org/examples/en/editor.html?c=line-marker&code=nVXNattAEL77KZZclEAqJDn-DT2kgUIgpYGEHBpMGEtrZ6m0a3ZXqR3jh8mxh75Ar3mxzq5-LMmySWqMkWfH3zfzzTfrUHClSQQaFNXkM3noELI-Ai6OxiTw_P4pOdJCQ_wYPqXP8JgkJj7quR4eRAxUEQemHnv21B-0HPleduZtTusEJnmXwPfd3n4Cfz9Br4k_bMMf9M9cc9COH7Qd5fiB3yQYtRGcjQauOdhD0NZboVC_QRAYpXcIeiPf7e5XqI27IGh2EBg5dwi6w-GhEXyIIGgjGHWHrnFXO0H3gImCsyaBUWJ3Bv3eAQJrjHfP4KxVosHQNa3tGfIBl_o7HRipd4ccHJqBNcY-gu6mMznvdMRCM8FxrddIp5mO6dg-4he61GPi3Is4TSiJKLEgBMI0SWOIgCyEJFgeOTa3AAFb5An5RL7CC-V4fgmSw9vfKWDsDhZUirdXfLz54jqmN0JiOjMMIeWayjxmWG_1alsGITPB9S17wYjft6ENflp5tBCxZouyYsnmcyoREpZM5YDm8UYwQ7GF1KsFwjmhFEo5pA4a0zmWX2IKhHemQmuROFXeqVgWOepJ_Boje0ozyhkFncpKB-by_CFEghGyusCCrnhE8ecOF5w6GWaRd88ogq2JpBB95_FqTGYQK7pNSmDOwjvbwDpv5MGJGQKdYqEgnck2V1Klha2kDCl4phfqClFsuN47vre1moseLViXTMUsKoe12zohy0p_D96kTNQgcdhe8d1K7Htexp9FG1SMK-Qqqf4LGD9tZv73VYwkYglFdPxnM-KhiY129e0ykZa1agublXLygjJDiFSG2ELOWqhrOyiNlVsQNJ0Luaq49RqmNK7aXyagrX2d9TPEKd0YI1amZi3VwLWJHwIl2EQdV1HJqFGoNh0OiSHY3guX9l44TpKTclZ5EZkry8GEIqosBephNtVoX0bQ7c0x5GcV-8ufdp-rSEboos7sVayGk8ASZ5YX_e3tdckSUVm5ei7j1dw_PMstUydtxVxjk--sBVdP4t5VOX6jmVoptv7tbM7_AQ&enc=deflate
+	⚠ Please be aware that this chart is not an official demo of Apache ECharts but is made by user-generated code.
+-->
+<!DOCTYPE html>
+<html lang="en" style="height: 100%">
+<head>
+  <meta charset="utf-8">
+</head>
+<body style="height: 100%; margin: 0">
+  <div id="container" style="height: 100%"></div>
+
+  
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5/dist/echarts.min.js"></script>
+  
+  <!-- Uncomment this line if you want to dataTool extension
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5/dist/extension/dataTool.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to use gl extension
+  <script type="text/javascript" src="https://echarts.apache.org/en/js/vendors/echarts-gl/dist/echarts-gl.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to echarts-stat extension
+  <script type="text/javascript" src="https://echarts.apache.org/en/js/vendors/echarts-stat/dist/ecStat.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to echarts-graph-modularity extension
+  <script type="text/javascript" src="https://echarts.apache.org/en/js/vendors/echarts-graph-modularity/dist/echarts-graph-modularity.min.js"></script>
+  -->
+  <!-- Uncomment this line if you want to use map
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@4.9.0/map/js/world.js"></script>
+  -->
+  <!-- Uncomment these two lines if you want to use bmap extension
+  <script type="text/javascript" src="https://api.map.baidu.com/api?v=3.0&ak=YOUR_API_KEY"></script>
+  <script type="text/javascript" src="https://fastly.jsdelivr.net/npm/echarts@5/dist/extension/bmap.min.js"></script>
+  -->
+
+  <script type="text/javascript">
+    var dom = document.getElementById('container');
+    var myChart = echarts.init(dom, null, {
+      renderer: 'canvas',
+      useDirtyRect: false
+    });
+    var app = {};
+    
+    var option;
+
+    const dataset = [
+  {"ano": 2016, "total_chuva_mm": 295.0, "dias_chuva_mais_5mm": 17, "dias_chuva_mais_10mm": 10},
+  {"ano": 2017, "total_chuva_mm": 211.5, "dias_chuva_mais_5mm": 11, "dias_chuva_mais_10mm": 5},
+  {"ano": 2018, "total_chuva_mm": 764.8, "dias_chuva_mais_5mm": 28, "dias_chuva_mais_10mm": 21},
+  {"ano": 2019, "total_chuva_mm": 497.9, "dias_chuva_mais_5mm": 25, "dias_chuva_mais_10mm": 16},
+  {"ano": 2020, "total_chuva_mm": 591.3, "dias_chuva_mais_5mm": 19, "dias_chuva_mais_10mm": 11},
+  {"ano": 2021, "total_chuva_mm": 388.5, "dias_chuva_mais_5mm": 19, "dias_chuva_mais_10mm": 11},
+  {"ano": 2022, "total_chuva_mm": 938.6, "dias_chuva_mais_5mm": 37, "dias_chuva_mais_10mm": 24},
+  {"ano": 2023, "total_chuva_mm": 465.6, "dias_chuva_mais_5mm": 18, "dias_chuva_mais_10mm": 16},
+  {"ano": 2024, "total_chuva_mm": 378.2, "dias_chuva_mais_5mm": 21, "dias_chuva_mais_10mm": 14},
+  {"ano": 2025, "total_chuva_mm": 528.5, "dias_chuva_mais_5mm": 20, "dias_chuva_mais_10mm": 13}
+];
+
+option = {
+  title: {
+    text: 'Volume de chuva acumulada por ano (2016 a 2025) - Fazenda Carnaúba - Taperoá - PB.',
+    left: 'center',
+    textStyle: {
+      fontSize: 16
+    }
+  },
+  tooltip: {
+    trigger: 'axis',
+    axisPointer: {
+      type: 'cross' 
+    }
+  },
+  legend: {
+    top: 'bottom'
+  },
+  toolbox: {
+    show: true,
+    feature: {
+      dataZoom: { yAxisIndex: 'none' },
+      dataView: { readOnly: false },
+      magicType: { type: ['line', 'bar'] },
+      restore: {},
+      saveAsImage: {}
+    }
+  },
+  
+  dataZoom: [
+    {
+      type: 'slider',
+      show: true,
+      xAxisIndex: [0],
+      start: 0,
+      end: 100
+    },
+    {
+      type: 'inside',
+      xAxisIndex: [0],
+      start: 0,
+      end: 100
+    }
+  ],
+  dataset: {
+    dimensions: ['ano', 'total_chuva_mm', 'dias_chuva_mais_5mm', 'dias_chuva_mais_10mm'],
+    
+    source: dataset
+  },
+  xAxis: {
+    type: 'category',
+    axisLabel: {
+      formatter: '{value}'
+    }
+  },
+  yAxis: {
+    type: 'value',
+    axisLabel: {
+      formatter: '{value} mm'
+    }
+  },
+  series: [
+    {
+      name: 'Volume de Chuva (mm)',
+      type: 'line',
+      encode: {
+        x: 'ano',
+        y: 'total_chuva_mm'
+      },
+      markPoint: {
+        data: [
+          { type: 'max', name: 'Máximo' },
+          { type: 'min', name: 'Mínimo' }
+        ]
+      },
+      markLine: {
+        data: [
+          { type: 'average', name: 'Média' }
+        ]
+      }
+    }
+  ]
+};
+
+    if (option && typeof option === 'object') {
+      myChart.setOption(option);
+    }
+
+    window.addEventListener('resize', myChart.resize);
+  </script>
+</body>
+</html>
